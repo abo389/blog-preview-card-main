@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preload" href="assets/fonts/Figtree-VariableFont_wght.ttf" as="font" type="font/wght" crossorigin>
+
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <style>
+    :root {
+      --yellow: hsl(47, 88%, 63%);
+      --White: hsl(0, 0%, 100%);
+      --Grey: hsl(0, 0%, 50%);
+      --Black: hsl(0, 0%, 7%);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    img {
+      max-width: 100%;
+    }
+    @font-face {
+      font-family: "figtree";
+      src: url("assets/fonts/Figtree-VariableFont_wght.ttf");
+    }
+    body {
+      background-color: var(--yellow);
+      font-family: "figtree";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    @media (max-width: 375px) {
+      .card {
+        width: 300px !important;
+        gap: 15px !important;
+        box-shadow: 8px 8px 0 var(--Black) !important;
+      }
+      .card > span {
+        font-size: 14px;
+      }
+      .card .date {
+        font-size: 14px;
+      }
+      .card h2 {
+        font-size: 20px;
+      }
+      .card p {
+        font-size: 12px !important;
+      }
+    }
+    .card {
+      background-color: var(--White);
+      width: 350px;
+      padding: 20px;
+      border: 1px solid var(--Black);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      box-shadow: 15px 15px 0 var(--Black);
+    }
+    .card img {
+      border-radius: 10px;
+    }
+    .card > span {
+      background-color: var(--yellow);
+      padding: 5px 10px;
+      font-weight: 900;
+      border-radius: 5px;
+    }
+    .card .date {
+      font-weight: 600;
+    }
+    .card h2 {
+      font-weight: 800;
+    }
+    .card h2:hover {
+      color: var(--yellow);
+      cursor: pointer;
+    }
+    .card p {
+      font-size: 14px;
+      color: var(--Grey);
+      line-height: 1.5;
+    }
+    .card .info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card .info img {
+      width: 40px;
+    }
+    .card .info span {
+      font-weight: 800;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="assets/images/illustration-article.svg" alt="">
+    <span>Learning</span>
+    <div class="date">Published 21 Dec 2023</div>
+    <h2>HTML & CSS foundation</h2>
+    <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
+    <div class="info">
+      <img src="assets/images/image-avatar.webp" alt="">
+      <span>Greg Hooper</span>
+    </div>
+  </div>
+</body>
+</html>
